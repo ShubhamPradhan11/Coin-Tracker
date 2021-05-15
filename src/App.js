@@ -8,12 +8,15 @@ import "./App.css"
 
 function App() {
   return (
-    <WatchListContextProvider>
-      <Router>
-        <Header/>
-        <Route exact path='/' component={CoinsSummaryPage}></Route>
-      </Router>
-    </WatchListContextProvider>
+    <div className="container">
+      <WatchListContextProvider>
+        <Router>
+          <Header/>
+          <Route exact path='/' component={CoinsSummaryPage}></Route>
+          {/* <Route exact path='/Coin/:id' component={CoinsDetailsPage}></Route> */}
+        </Router>
+      </WatchListContextProvider>
+    </div>
   )
 }
 
